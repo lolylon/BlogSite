@@ -116,7 +116,34 @@ body {
 }
 
 /* Анимации */
-/* Add these styles to the existing main.css file */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content-section {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Подвал */
+footer {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  body {
+    margin-top: 4rem;
+  }
+  
+  .account-img {
+    height: 100px;
+    width: 100px;
+  }
+}
 
 /* Card animations */
 .card {
@@ -134,13 +161,14 @@ body {
 .post-image-container {
     overflow: hidden;
     border-radius: var(--border-radius);
-    max-height: 400px;
+    max-height: none; /* Убираем ограничение по высоте */
 }
 
 .post-image-container img {
     transition: transform 0.5s ease;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Изменяем с cover на contain для сохранения пропорций */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
 }
 
 .post-image-container:hover img {
