@@ -130,7 +130,27 @@ footer {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
   color: white;
   padding: 2rem 0;
-  margin-top: 3rem;
+  margin-top: auto; /* Изменено с margin-top: 3rem для прижатия к низу */
+}
+
+/* Стили для прижатия footer к низу страницы */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main.container {
+  flex: 1 0 auto; /* Позволяет main растягиваться и занимать доступное пространство */
+}
+
+/* Специальный класс для страницы поиска */
+.search-page-container {
+  min-height: calc(100vh - 500px); /* Вычитаем примерную высоту header и footer */
 }
 
 /* Адаптивность для мобильных устройств */
