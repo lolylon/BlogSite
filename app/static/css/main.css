@@ -1,0 +1,35 @@
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    margin-top: 5rem;
+}
+
+.site-header .navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.article-img {
+    height: 40px;
+    width: 40px;
+    margin-right: 5px;
+}
+
+.content-section {
+    background: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    padding: 20px 0;
+}
